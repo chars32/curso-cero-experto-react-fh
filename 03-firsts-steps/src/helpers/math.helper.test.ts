@@ -1,14 +1,77 @@
-import { expect, test } from "vitest";
-import { add } from "./math.helper";
+import { describe, expect, test } from "vitest";
+import { add, multiply, subtract } from "./math.helper";
 
-test("shoul add two positives number", () => {
-  // ! 1. Arrange
-  const a = 1;
-  const b = 2;
+describe("add", () => {
+  test("should add two positives number", () => {
+    // ! 1. Arrange
+    const a = 1;
+    const b = 2;
 
-  // ! 2. Act
-  const result = add(a, b);
+    // ! 2. Act
+    const result = add(a, b);
 
-  // ! 3. Assert
-  expect(result).toBe(a + b);
+    // ! 3. Assert
+    expect(result).toBe(a + b);
+  });
+  test("should add two negatives number", () => {
+    // ! 1. Arrange
+    const a = -2;
+    const b = -4;
+
+    // ! 2. Act
+    const result = add(a, b);
+
+    // ! 3. Assert
+    expect(result).toBe(a + b);
+  });
+});
+
+describe("subtract", () => {
+  test("should subtract two positives number", () => {
+    // ! 1. Arrange
+    const a = 1;
+    const b = 2;
+
+    // ! 2. Act
+    const result = subtract(a, b);
+
+    // ! 3. Assert
+    expect(result).toBe(a - b);
+  });
+  test("should subtract two negatives number", () => {
+    // ! 1. Arrange
+    const a = -2;
+    const b = -4;
+
+    // ! 2. Act
+    const result = subtract(a, b);
+
+    // ! 3. Assert
+    expect(result).toBe(a - b);
+  });
+});
+
+describe("multiply", () => {
+  test("should multiply two positives number", () => {
+    // ! 1. Arrange
+    const a = 1;
+    const b = 2;
+
+    // ! 2. Act
+    const result = multiply(a, b);
+
+    // ! 3. Assert
+    expect(result).toBe(a * b);
+  });
+  test("should multiply two negative numbers", () => {
+    // ! 1. Arrange
+    const a = -2;
+    const b = -4;
+
+    // ! 2. Act
+    const result = multiply(a, b);
+
+    // ! 3. Assert
+    expect(result).toBe(a * b);
+  });
 });
