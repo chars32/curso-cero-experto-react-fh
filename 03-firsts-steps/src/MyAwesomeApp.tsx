@@ -8,9 +8,10 @@ const myStyles: CSSProperties = {
 
 export function MyAwesomeApp() {
   return (
-    <>
-      <h1>Carlos</h1>
+    <div>
+      <h1 className="my-class">Carlos</h1>
       <h3 style={myStyles}>García</h3>
-    </>
+      <h4 data-testid="test-id">Nuevo texto</h4>
+    </div>
   );
 }
