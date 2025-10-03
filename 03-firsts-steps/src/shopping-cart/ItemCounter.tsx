@@ -14,7 +14,7 @@ export const ItemCounter = ({ productName, quantity = 1 }: Props) => {
     setCount(count + 1);
   };
   const handleSubtract = () => {
-    count < 1 ? 0 : setCount(count - 1);
+    count === 1 ? 1 : setCount(count - 1);
   };
 
   return (
