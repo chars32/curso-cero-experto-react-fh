@@ -7,12 +7,18 @@ exports[`FirstStepsApp > should match snapshot 1`] = `
   </h1>
   <div
     data-testid="ItemCounter"
+    productname="Nintendo Switch 2"
+    quantity="1"
   />
   <div
     data-testid="ItemCounter"
+    productname="Pro Controller"
+    quantity="2"
   />
   <div
     data-testid="ItemCounter"
+    productname="Super Smas"
+    quantity="5"
   />
 </div>
 `;
