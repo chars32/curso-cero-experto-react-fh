@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MyAwesomeApp > should match snapshot 1`] = `
+<h4
+  data-testid="test-id"
+>
+  Nuevo texto
+</h4>
+`;
