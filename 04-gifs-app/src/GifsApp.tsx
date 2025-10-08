@@ -13,7 +13,18 @@ export const GifsApp = () => {
   };
 
   const handleSearch = (query: string) => {
-    console.log({ query });
+    // Convertimos la query a minúsculas y eliminamos espacios en blanco al inicio
+    // y al final
+    query = query.trim().toLowerCase();
+
+    // Si la query está vacía, no hacemos nada
+    if (query.trim().length === 0) return;
+
+    // Si la query no está en el array de términos previos, la añadimos al inicio
+    // y limitamos el array a 5 términos
+    if (!previousTerms.includes(query)) {
+      setPreviousTerms((prevTerms) => [query, ...prevTerms].splice(0, 5));
+    }
   };
 
   return (
