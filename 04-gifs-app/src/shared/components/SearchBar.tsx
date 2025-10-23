@@ -2,7 +2,7 @@ import { useEffect, useState, type KeyboardEvent } from "react";
 
 interface Props {
   placeholder?: string;
-  buttonName: string;
+  buttonName?: string;
 
   onQuery: (query: string) => void;
 }
