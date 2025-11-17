@@ -13,7 +13,7 @@ export const appRouter = createBrowserRouter([
     element: <ProfilePage />,
   },
   {
-    path: "/",
+    path: "/login",
     element: <LoginPage />,
   },
   {
