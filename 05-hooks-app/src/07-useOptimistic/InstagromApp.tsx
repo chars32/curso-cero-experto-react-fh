@@ -1,4 +1,5 @@
 import { useOptimistic, useState, useTransition } from "react";
+import { toast } from "sonner";
 
 interface Comment {
   id: number;
@@ -33,10 +34,19 @@ export const InstagromApp = () => {
       // Simular petición http al servicor
       await new Promise((resolve) => setTimeout(resolve, 3000));
 
-      setComments((prev) => [
-        ...prev,
-        { id: new Date().getTime(), text: messageText },
-      ]);
+      // setComments((prev) => [
+      //   ...prev,
+      //   { id: new Date().getTime(), text: messageText },
+      // ]);
+
+      //! Este sería el código para revertir el optimisticComment en caso de error
+      setComments((prev) => prev);
+      toast.error("Error al enviar el comentario", {
+        description: "Inténtalo de nuevo más tarde.",
+        duration: 10_000,
+        position: "top-right",
+        action: { label: "Cerrar", onClick: () => toast.dismiss() },
+      });
     });
   };
 

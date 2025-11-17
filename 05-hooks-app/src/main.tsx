@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { Toaster } from "sonner";
 
 // import { TrafficLightWithHooks } from "./02-useEffect/TrafficLightWithHooks";
 // import { TrafficLightWithEffect } from "./02-useEffect/TrafficLightWithEffect";
@@ -17,6 +18,7 @@ import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
+    <Toaster />
     {/* <HooksApp /> */}
     {/* <TrafficLight /> */}
     {/* <TrafficLightWithEffect /> */}
