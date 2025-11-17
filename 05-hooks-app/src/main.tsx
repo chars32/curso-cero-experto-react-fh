@@ -13,10 +13,11 @@ import { Toaster } from "sonner";
 // import { MemoHooks } from "./06-memos/MemoHooks";
 // import { MemoCounter } from "./06-memos/MemoCounter";
 // import { InstagromApp } from "./07-useOptimistic/InstagromApp";
-import ClientInformation from "./08-use-suspense/ClientInformation";
+// import ClientInformation from "./08-use-suspense/ClientInformation";
+import ProfessionalApp from "./09-useContext/ProfessionalApp";
 
 import "./index.css";
-import { getUserAction } from "./08-use-suspense/api/get-user-action";
+// import { getUserAction } from "./08-use-suspense/api/get-user-action";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -32,7 +33,7 @@ createRoot(document.getElementById("root")!).render(
     {/* <MemoHooks /> */}
     {/* <MemoCounter /> */}
     {/* <InstagromApp /> */}
-    <Suspense
+    {/* <Suspense
       fallback={
         <div className="bg-gradient flex flex-col">
           <h2 className="text-4xl">Loading...</h2>
@@ -40,6 +41,7 @@ createRoot(document.getElementById("root")!).render(
       }
     >
       <ClientInformation getUser={getUserAction(1001)} />
-    </Suspense>
+    </Suspense> */}
+    <ProfessionalApp />
   </StrictMode>
 );
